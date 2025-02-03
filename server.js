@@ -7,7 +7,7 @@ const app = express();
 
 // Configure CORS with specific options
 app.use(cors({
-    origin: ['https://frontend-production-7549.up.railway.app'], // Add your frontend URLs
+    origin: ['*'], // Add your frontend URLs
     methods: ['GET', 'POST'],
     credentials: true
 }));
@@ -143,7 +143,7 @@ app.post('/api/logout', (req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['https://frontend-production-7549.up.railway.app'], // Add your frontend URLs
+        origin: ['*'], // Add your frontend URLs
         methods: ['GET', 'POST'],
         credentials: true
     }
